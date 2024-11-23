@@ -1,11 +1,10 @@
 from fastapi import FastAPI
 
-from app import api
+from app.api.v2.handlers import router
 
 
-async def lifespan(_:FastAPI):
+async def lifespan(_: FastAPI):
     yield
-
 
 
 def init_app():
@@ -17,7 +16,8 @@ def init_app():
         redoc_url='/redoc',
         lifespan=lifespan,
     )
-    app.include_router(api.router)
+    app.include_router(router)
     return app
+
 
 app = init_app()

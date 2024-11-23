@@ -1,12 +1,12 @@
 from fastapi import APIRouter, status, HTTPException
 
-from app.v2 import schemas
-from app_v2.core import exeptions, update, delete
-from app_v2.core import search
-from app_v2.core.create import create
-from app_v2.storage.storage import books
+from app.api.v2 import schemas
+from app.core import exeptions, update, delete
+from app.core import search
+from app.core.create import create
 
 router = APIRouter()
+
 
 @router.get(
     '/books/',
@@ -17,6 +17,7 @@ async def get_books():
     '''возвращает список книг '''
     items = search.books()
     return {'items': items}
+
 
 @router.get(
     '/book/{book_id}/',

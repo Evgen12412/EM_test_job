@@ -1,4 +1,4 @@
-from app_v2.storage.storage import books as books_
+from app.storage.storage import books as books_
 
 
 def create(title, author, year, status):

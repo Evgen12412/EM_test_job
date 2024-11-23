@@ -1,5 +1,5 @@
-from app_v2.core import exeptions
-from app_v2.storage.storage import books as books_
+from app.core import exeptions
+from app.storage.storage import books as books_
 
 
 def book(book_id):
