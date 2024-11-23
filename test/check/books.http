@@ -1,0 +1,11 @@
+###
+GET http://localhost:8888/api/v1/books/
+Content-Type: application/json
+
+###
+GET http://localhost:8888/api/v1/book/1/
+Content-Type: application/json
+
+###
+PUT http://localhost:8888/api/v1/book/1
+Content-Type: application/json
