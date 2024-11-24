@@ -9,5 +9,6 @@ def start_server():
         workers=1
     )
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     start_server()
