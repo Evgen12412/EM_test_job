@@ -3,9 +3,8 @@ from fastapi import FastAPI
 from app import api
 
 
-async def lifespan(_:FastAPI):
+async def lifespan(_: FastAPI):
     yield
-
 
 
 def init_app():
@@ -19,5 +18,6 @@ def init_app():
     )
     app.include_router(api.router)
     return app
+
 
 app = init_app()

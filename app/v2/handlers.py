@@ -8,6 +8,7 @@ from app_v2.storage.storage import books
 
 router = APIRouter()
 
+
 @router.get(
     '/books/',
     status_code=status.HTTP_200_OK,
@@ -17,6 +18,7 @@ async def get_books():
     '''возвращает список книг '''
     items = search.books()
     return {'items': items}
+
 
 @router.get(
     '/book/{book_id}/',
