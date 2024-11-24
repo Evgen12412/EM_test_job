@@ -5,6 +5,7 @@ from typing import List, Dict, Union
 # Константы
 BOOKS_FILE = 'library.json'
 
+
 class Book:
     def __init__(self, title: str, author: str, year: int, status: str = "в наличии", book_id: int = None):
         self.title = title
